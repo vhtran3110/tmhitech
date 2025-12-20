@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>TM HI-TECH</title>
+
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/style.css" rel="stylesheet" />
+</head>
+<body>
+
+    <header class="top-header">
+        <div class="container">
+            <b>TM HI-TECH</b>
+            <span style="float:right">📞 0912.500.099</span>
+        </div>
+    </header>
+
+    <nav class="navbar navbar-inverse">
+        <div class="container">
+            <ul class="nav navbar-nav">
+                <li>@Html.ActionLink("Trang chủ", "Index", "Home")</li>
+                <li>@Html.ActionLink("Giới thiệu", "Index", "About")</li>
+                <li>@Html.ActionLink("Sản phẩm", "Index", "Product")</li>
+                <li>@Html.ActionLink("Dự án", "Index", "Project")</li>
+                <li>@Html.ActionLink("Dịch vụ", "Index", "Service")</li>
+                <li>@Html.ActionLink("Tin tức", "Index", "News")</li>
+                <li>@Html.ActionLink("Tuyển dụng", "Index", "Recruitment")</li>
+                <li>@Html.ActionLink("Liên hệ", "Index", "Contact")</li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        @RenderBody()
+    </div>
+
+    <footer class="footer">
+        © 2025 TM HI-TECH
+    </footer>
+
+    <script src="~/Scripts/jquery-3.7.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/main.js"></script>
+
+</body>
+</html>
