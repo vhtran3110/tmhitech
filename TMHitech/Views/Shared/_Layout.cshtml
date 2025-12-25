@@ -3,31 +3,57 @@
 <head>
     <meta charset="utf-8" />
     <title>TM HI-TECH</title>
-
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
-    <link href="~/Content/style.css" rel="stylesheet" />
+    <link href="~/Content/css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 
     <header class="top-header">
-        <div class="container">
-            <b>TM HI-TECH</b>
-            <span style="float:right">📞 0912.500.099</span>
+        <div class="top-bar">
+            <div class="container">
+                <div class="row align-items-center">
+
+                    <div class="col-md-7 col-sm-12 top-left">
+                        <img src="~/Content/Images/logo.png" class="logo-img" />
+                        <div class="company-info">
+                            <div class="company-name">
+                                CÔNG TY CỔ PHẦN THIẾT BỊ CÔNG NGHỆ CAO TM
+                            </div>
+                            <div class="company-desc">
+                                Nhập khẩu và Phân Phối Thiết Bị Y Tế Cao Cấp Chính Hãng
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-5 col-sm-12 top-right">
+                        <span class="hotline-icon">📞</span>
+                        <span class="hotline-text">0912.500.099</span>
+                        <img src="~/Content/Images/flag-vn.png" class="flag" />
+                        <img src="~/Content/Images/flag-en.png" class="flag" />
+                    </div>
+
+                </div>
+            </div>
         </div>
     </header>
 
-    <nav class="navbar navbar-inverse">
+    <nav class="main-menu">
         <div class="container">
-            <ul class="nav navbar-nav">
-                <li>@Html.ActionLink("Trang chủ", "Index", "Home")</li>
-                <li>@Html.ActionLink("Giới thiệu", "Index", "About")</li>
-                <li>@Html.ActionLink("Sản phẩm", "Index", "Product")</li>
-                <li>@Html.ActionLink("Dự án", "Index", "Project")</li>
-                <li>@Html.ActionLink("Dịch vụ", "Index", "Service")</li>
-                <li>@Html.ActionLink("Tin tức", "Index", "News")</li>
-                <li>@Html.ActionLink("Tuyển dụng", "Index", "Recruitment")</li>
-                <li>@Html.ActionLink("Liên hệ", "Index", "Contact")</li>
+            <ul class="menu-list">
+                <li class="active">@Html.ActionLink("TRANG CHỦ", "Index", "Home")</li>
+                <li>@Html.ActionLink("GIỚI THIỆU", "Index", "About")</li>
+                <li>@Html.ActionLink("SẢN PHẨM", "Index", "Product")</li>
+                <li>@Html.ActionLink("DỰ ÁN", "Index", "Project")</li>
+                <li>@Html.ActionLink("DỊCH VỤ", "Index", "Service")</li>
+                <li>@Html.ActionLink("TIN TỨC", "Index", "News")</li>
+                <li>@Html.ActionLink("TUYỂN DỤNG", "Index", "Recruit")</li>
+                <li>@Html.ActionLink("LIÊN HỆ", "Index", "Contact")</li>
             </ul>
+
+            <div class="menu-search">
+                <input type="text" placeholder="Nhập từ khóa…" />
+            </div>
         </div>
     </nav>
 
@@ -35,13 +61,68 @@
         @RenderBody()
     </div>
 
-    <footer class="footer">
-        © 2025 TM HI-TECH
-    </footer>
-
     <script src="~/Scripts/jquery-3.7.1.min.js"></script>
     <script src="~/Scripts/bootstrap.min.js"></script>
     <script src="~/Scripts/main.js"></script>
 
+    <footer class="site-footer">
+
+        <div class="footer-top">
+            <div class="footer-container">
+
+                <div class="footer-col">
+                    <h4>CÔNG TY CỔ PHẦN THIẾT BỊ CÔNG NGHỆ CAO TM.<br />TM HI-TECH JSC.</h4>
+                    <p><i class="fa fa-map-marker"></i> Trụ sở:</p>
+                    <p>12B/2, 781 Hồng Hà, Quận Hoàn Kiếm,<br />Hà Nội, Việt Nam.</p>
+                    <p>Tel: (04) 3 576 3436</p>
+                    <p>Fax: (04) 3 576 3512</p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>VPDD tại HN:</h4>
+                    <p>42 Phương Mai, Đống Đa, Hà Nội</p>
+                    <p>Tel: (04) 3 576 3636 & (04) 3576 6999</p>
+                    <p>Hotline: 098 836 6622</p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Chi nhánh HCM:</h4>
+                    <p>08.04 lô A, chung cư Bàu Cát 2,</p>
+                    <p>phường 8, Q. Tân Bình, TP.HCM</p>
+                    <p>Tel: (08) 3860 3136</p>
+                    <p>Hotline: 098 969 7177</p>
+                </div>
+
+                <div class="footer-col facebook">
+                    <h4>FACEBOOK</h4>
+                    <img src="/Content/images/facebook-box.png" alt="Facebook">
+                </div>
+
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-container bottom-flex">
+                <ul class="footer-menu">
+                    <li class="active">@Html.ActionLink("Trang chủ", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Giới thiệu", "Index", "About")</li>
+                    <li>@Html.ActionLink("Sản phẩm", "Index", "Product")</li>
+                    <li>@Html.ActionLink("Dự án", "Index", "Project")</li>
+                    <li>@Html.ActionLink("Dịch vụ", "Index", "Service")</li>
+                    <li>@Html.ActionLink("Tin tức", "Index", "News")</li>
+                    <li>@Html.ActionLink("Tuyển dụng", "Index", "Recruit")</li>
+                    <li>@Html.ActionLink("Liên hệ", "Index", "Contact")</li>
+                </ul>
+
+                <div class="footer-social">
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                    <a href="#"><i class="fa fa-google-plus"></i></a>
+                    <a href="#"><i class="fa fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+
+    </footer>
 </body>
 </html>

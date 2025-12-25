@@ -27,6 +27,9 @@
     <Property Name="Description" Type="nvarchar(max)" />
     <Property Name="Image" Type="nvarchar" MaxLength="255" />
     <Property Name="CategoryId" Type="int" />
+    <Property Name="Country" Type="nvarchar" MaxLength="100" />
+    <Property Name="Model" Type="nvarchar" MaxLength="100" />
+    <Property Name="Manufacturer" Type="nvarchar" MaxLength="255" />
   </EntityType>
   <Association Name="FK__Products__Catego__398D8EEE">
     <End Role="Categories" Type="Self.Categories" Multiplicity="0..1" />

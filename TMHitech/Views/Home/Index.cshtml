@@ -1,40 +1,139 @@
 ﻿@model TMHitech.MVC.ViewModels.HomeViewModel
 
-<div id="slider" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner">
-        <div class="carousel-item active">
-            <img src="/images/banner1.jpg" class="d-block w-100">
+<link href="~/Content/Site.css" rel="stylesheet" />
+<link href="~/Content/css/style.css" rel="stylesheet" />
+
+<section class="home-banner">
+    <div class="banner-overlay"></div>
+
+    <div class="container banner-content">
+        <div class="row align-items-center">
+
+            <div class="col-md-5 banner-text">
+                <h1>@Model.FeaturedProduct.Name</h1>
+                <div class="line"></div>
+
+                <ul>
+                    <li>===> Model: @Model.FeaturedProduct.Model</li>
+                    <li>===> Hãng sản xuất: @Model.FeaturedProduct.Manufacturer</li>
+                    <li>===> Nước sản xuất: @Model.FeaturedProduct.Country</li>
+                </ul>
+
+                <a href="#" class="btn-detail">
+                    Chi tiết <span>›</span>
+                </a>
+            </div>
+
+            <div class="col-md-7 text-center">
+                <img src="@Model.FeaturedProduct.Image" class="product-img" />
+            </div>
+
         </div>
     </div>
-</div>
 
+    <div class="slider-arrow left">‹</div>
+    <div class="slider-arrow right">›</div>
+</section>
 
-<h3 class="mt-4">Danh mục thiết bị</h3>
-<div class="row">
-    @foreach (var item in Model.Categories)
-    {
-<div class="col-md-4">
-    <div class="card mb-3">
-        <img src="/images/@item.Image" class="card-img-top">
-        <div class="card-body text-center">
-            <h5>@item.Name</h5>
-            <a href="/Product?categoryId=@item.Id" class="btn btn-outline-primary">Xem thêm</a>
+<section class="equipment-section">
+    <div class="equipment-row">
+        <div class="equipment-item bg1">
+            <div class="overlay overlay-left overlay-blue">
+                <h3>THIẾT BỊ</h3>
+                <h2>CHẨN ĐOÁN<br />HÌNH ẢNH</h2>
+                <a href="#" class="btn-view">Xem thêm &gt;</a>
+            </div>
+        </div>
+
+        <div class="equipment-item bg2">
+            <div class="overlay overlay-right overlay-purple">
+                <h3>THIẾT BỊ</h3>
+                <h2>HỒI SỨC<br />CẤP CỨU</h2>
+                <a href="#" class="btn-view">Xem thêm &gt;</a>
+            </div>
         </div>
     </div>
-</div>}
-</div>
 
+    <div class="equipment-row">
+        <div class="equipment-item bg3">
+            <div class="overlay overlay-right overlay-teal">
+                <h3>THIẾT BỊ</h3>
+                <h2>PHÒNG MỔ</h2>
+                <a href="#" class="btn-view">Xem thêm &gt;</a>
+            </div>
+        </div>
 
-<h3 class="mt-4">Kiến thức y tế</h3>
-<div class="row">
-    @foreach (var n in Model.News)
-    {
-<div class="col-md-3">
-    <div class="card">
-        <img src="/images/@n.Image" class="card-img-top">
-        <div class="card-body">
-            <h6>@n.Title</h6>
+        <div class="equipment-item bg4">
+            <div class="overlay overlay-left overlay-blue">
+                <h3>THIẾT BỊ</h3>
+                <h2>CHUYÊN KHOA<br />NỘI</h2>
+                <a href="#" class="btn-view">Xem thêm &gt;</a>
+            </div>
         </div>
     </div>
-</div>}
-</div>
+
+    <div class="equipment-row">
+        <div class="equipment-item bg5">
+            <div class="overlay overlay-left overlay-pink">
+                <h3>THIẾT BỊ</h3>
+                <h2>CHUYÊN KHOA SẢN – NHI</h2>
+                <a href="#" class="btn-view">Xem thêm &gt;</a>
+            </div>
+        </div>
+
+        <div class="equipment-item bg6">
+            <div class="overlay overlay-right overlay-teal">
+                <h3>THIẾT BỊ</h3>
+                <h2>PHỤC HỒI<br />CHỨC NĂNG</h2>
+                <a href="#" class="btn-view">Xem thêm &gt;</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="medical-knowledge">
+    <h2 class="section-title">KIẾN THỨC Y TẾ</h2>
+
+    <div class="knowledge-grid">
+
+        <div class="knowledge-item">
+            <img src="/Content/images/news1.jpg" alt="">
+            <div class="content">
+                <h3>Khi bị nhồi máu cơ tim, bạn chỉ có 10 giây để tự cứu lấy mình</h3>
+                <p>
+                    Bạn cảm thấy trong ngực có một luồng đau nhói, hơn thế nữa nó bắt đầu lan đến cánh tay và cằm...
+                </p>
+            </div>
+        </div>
+
+        <div class="knowledge-item">
+            <img src="/Content/images/news2.jpg" alt="">
+            <div class="content">
+                <h3>Khi bị nhồi máu cơ tim, bạn chỉ có 10 giây để tự cứu lấy mình</h3>
+                <p>
+                    Bạn cảm thấy trong ngực có một luồng đau nhói, hơn thế nữa nó bắt đầu lan đến cánh tay và cằm...
+                </p>
+            </div>
+        </div>
+
+        <div class="knowledge-item">
+            <img src="/Content/images/news3.jpg" alt="">
+            <div class="content">
+                <h3>Khi bị nhồi máu cơ tim, bạn chỉ có 10 giây để tự cứu lấy mình</h3>
+                <p>
+                    Bạn cảm thấy trong ngực có một luồng đau nhói, hơn thế nữa nó bắt đầu lan đến cánh tay và cằm...
+                </p>
+            </div>
+        </div>
+
+        <div class="knowledge-item">
+            <img src="/Content/images/news4.jpg" alt="">
+            <div class="content">
+                <h3>Khi bị nhồi máu cơ tim, bạn chỉ có 10 giây để tự cứu lấy mình</h3>
+                <p>
+                    Bạn cảm thấy trong ngực có một luồng đau nhói, hơn thế nữa nó bắt đầu lan đến cánh tay và cằm...
+                </p>
+            </div>
+        </div>
+    </div>
+</section>

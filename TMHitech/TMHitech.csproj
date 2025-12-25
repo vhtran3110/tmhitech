@@ -155,6 +155,7 @@
       <DependentUpon>Model1.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\Category.cs" />
+    <Compile Include="Models\Manufacturer.cs" />
     <Compile Include="Models\News.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="News.cs">
@@ -171,11 +172,22 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\style.css" />
+    <Content Include="Content\css\style.css" />
+    <Content Include="Content\Images\banner-bg.jpg" />
+    <Content Include="Content\Images\brands\daray.PNG" />
+    <Content Include="Content\Images\brands\heyer.PNG" />
+    <Content Include="Content\Images\brands\kalamed.PNG" />
+    <Content Include="Content\Images\brands\neurowerk.PNG" />
+    <Content Include="Content\Images\brands\olidef.PNG" />
+    <Content Include="Content\Images\brands\weyer.PNG" />
+    <Content Include="Content\Images\product-01.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Content\Images\flag-en.png" />
+    <Content Include="Content\Images\flag-vn.png" />
+    <Content Include="Content\Images\logo.PNG" />
     <Content Include="Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model1.edmx</DependentUpon>

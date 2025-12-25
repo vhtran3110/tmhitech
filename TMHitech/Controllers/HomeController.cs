@@ -15,10 +15,16 @@ namespace TMHitech.MVC.Controllers
         {
             var model = new HomeViewModel
             {
-                Categories = db.Categories.ToList(),
-                News = db.News.ToList()
+                FeaturedProduct = new Product()
+                {
+                    Name = "HỆ THỐNG GÂY MÊ KÈM THỞ PASITHEC HEYER",
+                    Model = "Pasithec",
+                    Manufacturer = "HEYER",
+                    Country = "ĐỨC",
+                    Image = "/Content/Images/product-01.jpg"
+                }
             };
-
+            model.Manufacturers = db.Manufacturers.ToList();
             return View(model);
         }
 

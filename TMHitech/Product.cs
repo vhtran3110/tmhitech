@@ -19,6 +19,9 @@ namespace TMHitech
         public string Description { get; set; }
         public string Image { get; set; }
         public Nullable<int> CategoryId { get; set; }
+        public string Country { get; set; }
+        public string Model { get; set; }
+        public string Manufacturer { get; set; }
     
         public virtual Category Category { get; set; }
     }

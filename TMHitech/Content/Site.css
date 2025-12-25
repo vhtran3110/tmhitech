@@ -22,3 +22,251 @@ select,
 textarea {
     max-width: 280px;
 }
+.equipment-section {
+    width: 100%;
+    margin: 40px 0;
+}
+
+.equipment-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.equipment-item {
+    position: relative;
+    flex: 1;
+    height: 260px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    width: 45%;
+    height: 100%;
+    padding: 30px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.overlay-left {
+    left: 0;
+}
+
+.overlay-right {
+    right: 0;
+}
+
+.overlay-blue {
+    background: rgba(0, 145, 170, 0.85);
+}
+
+.overlay-purple {
+    background: rgba(155, 120, 190, 0.85);
+}
+
+.overlay-teal {
+    background: rgba(0, 170, 150, 0.85);
+}
+
+.overlay-pink {
+    background: rgba(220, 120, 140, 0.85);
+}
+
+.overlay h3 {
+    font-size: 13px;
+    font-weight: 400;
+    margin-bottom: 6px;
+}
+
+.overlay h2 {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 18px;
+}
+
+.btn-view {
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 7px 14px;
+    font-size: 13px;
+    text-decoration: none;
+    width: fit-content;
+    transition: 0.3s;
+}
+
+    .btn-view:hover {
+        background: #fff;
+        color: #333;
+    }
+
+.bg1 {
+    background-image: url('/Content/images/cdha.jpg');
+}
+
+.bg2 {
+    background-image: url('/Content/images/hscc.jpg');
+}
+
+.bg3 {
+    background-image: url('/Content/images/phongmo.jpg');
+}
+
+.bg4 {
+    background-image: url('/Content/images/noi.jpg');
+}
+
+.bg5 {
+    background-image: url('/Content/images/sannhi.jpg');
+}
+
+.bg6 {
+    background-image: url('/Content/images/phuchoi.jpg');
+}
+/* ===== KIẾN THỨC Y TẾ ===== */
+
+.medical-knowledge {
+    margin: 50px 0;
+}
+
+.section-title {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: #1c1c1c;
+}
+
+.knowledge-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.knowledge-item {
+    background: #f5f5f5;
+    border-radius: 4px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+    .knowledge-item:hover {
+        box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        transform: translateY(-3px);
+    }
+
+    .knowledge-item img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+    }
+
+    .knowledge-item .content {
+        padding: 15px;
+    }
+
+    .knowledge-item h3 {
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 1.4;
+        margin-bottom: 10px;
+        color: #2a3f7c;
+    }
+
+    .knowledge-item p {
+        font-size: 13px;
+        color: #555;
+        line-height: 1.6;
+    }
+
+.site-footer {
+    background: #243f63;
+    color: #cfd8e3;
+    font-size: 13px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 30px 15px;
+}
+
+.footer-top {
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+    .footer-top .footer-container {
+        display: flex;
+        gap: 30px;
+    }
+
+.footer-col {
+    flex: 1;
+}
+
+    .footer-col h4 {
+        color: #fff;
+        font-size: 14px;
+        margin-bottom: 15px;
+        line-height: 1.4;
+    }
+
+    .footer-col p {
+        margin: 4px 0;
+        line-height: 1.6;
+    }
+
+    .footer-col.facebook img {
+        width: 100%;
+        border-radius: 3px;
+    }
+
+.footer-bottom {
+    background: #1d3452;
+}
+
+.bottom-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 15px;
+}
+
+    .footer-menu li a {
+        color: #cfd8e3;
+        text-decoration: none;
+    }
+
+        .footer-menu li a:hover {
+            color: #fff;
+        }
+
+.footer-social a {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1px solid #cfd8e3;
+    color: #cfd8e3;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 8px;
+    text-decoration: none;
+}
+
+    .footer-social a:hover {
+        background: #fff;
+        color: #1d3452;
+    }

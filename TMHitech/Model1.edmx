@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="TMHitechDbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="TMHitechDbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Categories">
           <Key>
             <PropertyRef Name="Id" />
@@ -32,6 +32,9 @@
           <Property Name="Description" Type="nvarchar(max)" />
           <Property Name="Image" Type="nvarchar" MaxLength="255" />
           <Property Name="CategoryId" Type="int" />
+          <Property Name="Country" Type="nvarchar" MaxLength="100" />
+          <Property Name="Model" Type="nvarchar" MaxLength="100" />
+          <Property Name="Manufacturer" Type="nvarchar" MaxLength="255" />
         </EntityType>
         <Association Name="FK__Products__Catego__398D8EEE">
           <End Role="Categories" Type="Self.Categories" Multiplicity="0..1" />
@@ -54,8 +57,7 @@
             <End Role="Products" EntitySet="Products" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="TMHitechDbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -88,6 +90,9 @@
           <Property Name="Image" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="CategoryId" Type="Int32" />
           <NavigationProperty Name="Category" Relationship="Self.FK__Products__Catego__398D8EEE" FromRole="Products" ToRole="Categories" />
+          <Property Name="Country" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Model" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Manufacturer" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
         </EntityType>
         <Association Name="FK__Products__Catego__398D8EEE">
           <End Role="Categories" Type="Self.Category" Multiplicity="0..1" />
@@ -139,6 +144,9 @@
           <EntitySetMapping Name="Products">
             <EntityTypeMapping TypeName="TMHitechDbModel.Product">
               <MappingFragment StoreEntitySet="Products">
+                <ScalarProperty Name="Manufacturer" ColumnName="Manufacturer" />
+                <ScalarProperty Name="Model" ColumnName="Model" />
+                <ScalarProperty Name="Country" ColumnName="Country" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="Description" ColumnName="Description" />

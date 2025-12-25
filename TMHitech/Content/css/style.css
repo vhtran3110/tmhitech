@@ -1,0 +1,236 @@
+﻿body {
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    background-color: #f8f9fa;
+}
+
+.top-header {
+    background: #ffffff;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #0d6efd;
+}
+
+.hotline {
+    color: #ff6a00;
+    font-weight: bold;
+}
+
+.footer {
+    background: #1f2d3d;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+}
+
+.product-box {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 15px;
+    transition: 0.3s;
+}
+
+    .product-box:hover {
+        box-shadow: 0 0 10px rgba(0,0,0,.2);
+    }
+
+.top-bar {
+    background: #ffffff;
+    border-bottom: 1px solid #e5e5e5;
+    padding: 10px 0;
+}
+
+.top-left {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    height: 55px;
+    margin-right: 15px;
+}
+
+.company-info {
+    line-height: 1.3;
+}
+
+.company-name {
+    font-size: 15px;
+    font-weight: bold;
+    color: #0b5ed7;
+    text-transform: uppercase;
+}
+
+.company-desc {
+    font-size: 13px;
+    color: #555;
+}
+
+.top-right {
+    text-align: right;
+}
+
+.hotline-icon {
+    font-size: 18px;
+    margin-right: 5px;
+}
+
+.hotline-text {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ff6a00;
+    margin-right: 15px;
+}
+
+.flag {
+    width: 32px;
+    height: 18px;
+    object-fit: contain;
+    background: #f5f5f5;
+    border: 1px solid #ddd;
+    padding: 1px;
+    margin-left: 6px;
+}
+
+.main-menu {
+    background: #ffffff;
+    border-bottom: 2px solid #0b5ed7;
+}
+
+    .main-menu .container {
+        display: flex;
+        align-items: center;
+    }
+
+.menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex: 1;
+}
+
+    .menu-list li {
+        margin-right: 25px;
+        position: relative;
+    }
+
+        .menu-list li a {
+            display: block;
+            padding: 12px 0;
+            font-size: 14px;
+            font-weight: 600;
+            color: #333;
+            text-transform: uppercase;
+        }
+
+            .menu-list li.active a,
+            .menu-list li a:hover {
+                color: #0b5ed7;
+            }
+
+        .menu-list li.active::after {
+            content: "";
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: #0b5ed7;
+        }
+
+.menu-search input {
+    height: 32px;
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    font-size: 13px;
+}
+.home-banner {
+    position: relative;
+    background-image: url('/Content/images/banner-bg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 520px;
+    color: #fff;
+    overflow: hidden;
+}
+
+.banner-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(110deg, #0b2d55 45%, rgba(11,45,85,0.6) 55%, transparent 60%);
+}
+
+.banner-content {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+}
+
+.banner-text h1 {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+.banner-text .line {
+    width: 80px;
+    height: 3px;
+    background: #f5a623;
+    margin: 20px 0;
+}
+
+.banner-text ul {
+    list-style: none;
+    padding: 0;
+}
+
+    .banner-text ul li {
+        margin-bottom: 10px;
+        font-size: 16px;
+    }
+
+.btn-detail {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 22px;
+    border: 2px solid #f5a623;
+    color: #f5a623;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: .3s;
+}
+
+    .btn-detail:hover {
+        background: #f5a623;
+        color: #fff;
+    }
+
+.product-img {
+    max-height: 420px;
+}
+
+.slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 48px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 3;
+    opacity: .7;
+}
+
+    .slider-arrow.left {
+        left: 20px;
+    }
+
+    .slider-arrow.right {
+        right: 20px;
+    }
