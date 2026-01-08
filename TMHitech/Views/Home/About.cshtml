@@ -1,7 +1,218 @@
-﻿@{
-    ViewBag.Title = "About";
-}
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
+﻿@model TMHitech.MVC.ViewModels.HomeViewModel
 
-<p>Use this area to provide additional information.</p>
+<link href="~/Content/Site.css" rel="stylesheet" />
+<link href="~/Content/css/style.css" rel="stylesheet" />
+
+<head>
+    <title>Giới Thiệu - TM Hi-Tech</title>
+    <style>
+        body {
+            font-family: Roboto, Arial, sans-serif;
+        }
+
+        .hero-section {
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://via.placeholder.com/1920x600?text=Background+Gioi+Thieu');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+
+            .hero-section h2 {
+                font-size: 2rem;
+                margin-bottom: 20px;
+            }
+
+        .breadcrumb {
+            background: #f8f9fa;
+            padding: 10px 0;
+        }
+
+        .about-content img {
+            max-width: 100%;
+            height: auto;
+            margin: 15px 0;
+        }
+
+        .sidebar-box {
+            background: #f8f9fa;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-left: 4px solid #007bff;
+        }
+
+            .sidebar-box h5 {
+                color: #007bff;
+                border-bottom: 2px solid #007bff;
+                padding-bottom: 10px;
+                margin-bottom: 20px;
+            }
+
+            .sidebar-box ul {
+                list-style: none;
+                padding: 0;
+            }
+
+                .sidebar-box ul li {
+                    margin-bottom: 15px;
+                }
+
+                    .sidebar-box ul li a {
+                        color: #333;
+                        text-decoration: none;
+                    }
+
+                        .sidebar-box ul li a:hover {
+                            color: #007bff;
+                        }
+
+        .news-item {
+            display: flex;
+            margin-bottom: 20px;
+        }
+
+            .news-item img {
+                width: 60px;
+                height: 60px;
+                object-fit: cover;
+                margin-right: 15px;
+            }
+
+            .news-item .news-text {
+                flex: 1;
+            }
+
+                .news-item .news-text a {
+                    font-size: 0.9rem;
+                    color: #333;
+                }
+
+                .news-item .news-text small {
+                    color: #999;
+                }
+
+        footer {
+            background: #003366;
+            color: white;
+            padding: 40px 0 20px;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <section class="hero-section">
+        <div class="container">
+            <h2>Làm mọi thứ với một niềm đam mê, hoặc không là gì cả.</h2>
+            <p>Cuộc sống luôn đầy đầy những điều tốt đẹp, trong đó có cả bạn.</p>
+            <p>Gia đình, bạn bè và cộng đồng thường là nguồn động viên của mỗi người trong chúng ta.</p>
+        </div>
+    </section>
+
+    <nav aria-label="breadcrumb">
+        <div class="container">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Giới thiệu</li>
+            </ol>
+        </div>
+    </nav>
+
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-lg-8">
+                <h3 class="mb-4">GIỚI THIỆU</h3>
+                <h5>Công ty cổ phần thiết bị công nghệ cao TM</h5>
+                <p>
+                    <strong>Được thành lập Tháng 2 năm 2004</strong><br>
+                    Tên viết tắt: TM Hitech.,JSC
+                </p>
+
+                <p>TM Hitech.,JSC: là công ty hoạt động trong lĩnh vực kinh doanh thiết bị y tế và thiết bị chăm sóc sức khỏe gia đình của nhiều thương hiệu lớn đẳng cấp, trải qua thời gian và kinh nghiệm lâu năm, tìm hiểu thị trường, nhu cầu của khách hàng, TMHitech đã và đang tạo được sự tin cậy mạnh mẽ với uy tín, chất lượng sản phẩm và đạo đức nghề nghiệp trong kinh doanh với đối ngũ cán bộ, chuyên viên yêu nghề, có năng lực và nhiều kinh nghiệm.</p>
+
+                <p><strong>Mục Tiêu Của TM Hitech:</strong> là trở thành một công ty kinh doanh thiết bị y tế tiêu biểu lớn mạnh và chuyên nghiệp tại Việt Nam. TM Hitech sẽ ngày càng phát triển vững chắc dựa trên nền tảng chất lượng sản phẩm và dịch vụ tốt nhất.</p>
+
+                <div class="row text-center my-4">
+                    <div class="col-md-4"><img src="https://via.placeholder.com/300x200?text=Hinh+1" alt="Giới thiệu 1" class="img-fluid rounded"></div>
+                    <div class="col-md-4"><img src="https://via.placeholder.com/300x200?text=Hinh+2" alt="Giới thiệu 2" class="img-fluid rounded"></div>
+                    <div class="col-md-4"><img src="https://via.placeholder.com/300x200?text=Hinh+3" alt="Giới thiệu 3" class="img-fluid rounded"></div>
+                </div>
+
+                <h5 class="mt-5">Hoạt Động Của TMHitech:</h5>
+                <p>TM Hitech hoạt động có hiệu quả và uy tín trong các lĩnh vực hoạt động của mình:</p>
+                <ol>
+                    <li>Cung cấp thiết bị chăm sóc sức khỏe gia đình cao cấp</li>
+                    <li>Cung cấp thiết bị y tế chuyên nghiệp và đẳng cấp</li>
+                    <li>Đáp ứng nhu cầu của khách hàng những thiết bị y tế công nghệ tiên tiến nhất.</li>
+                    <li>Sản phẩm đã được thử nghiệm ở nhiều bệnh viện khác nhau.</li>
+                </ol>
+
+                <h5 class="mt-4">Cam Kết:</h5>
+                <ul>
+                    <li>Cam kết đem lại cho khách hàng những giá trị thực sự về năng lực công nghệ, về kinh nghiệm thực tế, về bản lĩnh nghề nghiệp và phong cách làm việc chuyên nghiệp.</li>
+                    <li>TM Hitech luôn cung cấp những điều kiện vật chất và môi trường làm việc tốt cho các nhân viên nhằm khuyến khích sức sáng tạo và phát triển khả năng của mỗi người.</li>
+                    <li>TM Hitech cam kết sẽ mang đến cho Quý khách hàng những sản phẩm hoàn hảo, những sản phẩm chuyên nghiệp nhất, hiệu quả với giá cạnh tranh dành cho Quý khách khi đến với TMHitech.</li>
+                    <li>Sự sáng tạo từ văn nhiệt tình không mệt mỏi của đội ngũ chuyên gia lành nghề sẽ luôn mang đến cho Quý khách hàng được sự thỏa mãn.</li>
+                </ul>
+
+                <p class="mt-4"><strong>Hãy tin tưởng đón nhận những sản phẩm công nghệ cao mà chúng tôi mang đến cho Bạn ngày hôm nay.</strong></p>
+
+                <p><strong>Mọi thông tin chi tiết xin liên hệ:</strong></p>
+                <p>
+                    Công Ty Cổ Phần Thiết Bị Công Nghệ Cao TM – TM HI-TECH.,JSC.<br>
+                    Trụ sở: 128/2, 781 Hồng Hà, quận Hoàn Kiếm, Hà Nội, Việt Nam.<br>
+                    Điện thoại: 04 3 576 3436 / Fax: 04 3 576 5512 / Hotline: 0912 500 099
+                </p>
+                <p>
+                    Showroom 1: 55D Hàng Bài, quận Hoàn Kiếm, Hà Nội, Việt Nam.<br>
+                    Điện thoại: 043 9449 222 / Hotline: 0912 500 099
+                </p>
+                <p>
+                    Chi nhánh HCM: 47 Trần Hưng Đạo, Q. 1, TP. HCM<br>
+                    Điện thoại: 08 3 821 6079 / Fax: 08 3 821 6080 / Hotline: 0912 440 888
+                </p>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="sidebar-box">
+                    <h5>SẢN PHẨM NỔI BẬT</h5>
+                    <ul>
+                        <li><a href="#">Chẩn đoán hình ảnh <small>Xem chi tiết</small></a></li>
+                        <li><a href="#">Thăm dò chức năng <small>Xem chi tiết</small></a></li>
+                        <li><a href="#">Cấp cứu hồi sức tích cực <small>Xem chi tiết</small></a></li>
+                        <li><a href="#">Thiết bị phòng mổ <small>Xem chi tiết</small></a></li>
+                        <li><a href="#">Thiết bị nhi - Sản khoa <small>Xem chi tiết</small></a></li>
+                        <li><a href="#">Thiết bị y tế khác <small>Xem chi tiết</small></a></li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-box">
+                    <h5>TIN NỔI BẬT</h5>
+                    <div class="news-item">
+                        <img src="https://via.placeholder.com/60" alt="Tin 1">
+                        <div class="news-text">
+                            <a href="#">Khi bị nhồi máu cơ tim, bạn chỉ có 10 giây để cứu lấy chính mình</a>
+                            <small>23-02-2018</small>
+                        </div>
+                    </div>
+                    <div class="news-item">
+                        <img src="https://via.placeholder.com/60" alt="Tin 2">
+                        <div class="news-text">
+                            <a href="#">Khi bị nhồi máu cơ tim, bạn chỉ có 10 giây để cứu lấy chính mình</a>
+                            <small>23-02-2018</small>
+                        </div>
+                    </div>
+                    <div class="news-item">
+                        <img src="https://via.placeholder.com/60" alt="Tin 3">
+                        <div class="news-text">
+                            <a href="#">Khi bị nhồi máu cơ tim, bạn chỉ có 10 giây để cứu lấy chính mình</a>
+                            <small>23-02-2018</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

@@ -1,6 +1,6 @@
 ﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    background-color: #f8f9fa;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -129,7 +129,6 @@ textarea {
 .bg6 {
     background-image: url('/Content/images/phuchoi.jpg');
 }
-/* ===== KIẾN THỨC Y TẾ ===== */
 
 .medical-knowledge {
     margin: 50px 0;
@@ -270,3 +269,9 @@ textarea {
         background: #fff;
         color: #1d3452;
     }
+@media (min-width: 992px) {
+    .dropdown:hover > .dropdown-menu {
+        display: inline-block;
+        position: absolute;
+    }
+}

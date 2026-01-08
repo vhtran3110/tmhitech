@@ -1,15 +1,4 @@
-﻿body {
-    font-family: Roboto, Arial, Helvetica, sans-serif;
-    background-color: #f8f9fa;
-}
-
-.top-header {
-    background: #ffffff;
-    padding: 10px 0;
-    border-bottom: 1px solid #ddd;
-}
-
-.logo {
+﻿.logo {
     font-size: 22px;
     font-weight: bold;
     color: #0d6efd;
