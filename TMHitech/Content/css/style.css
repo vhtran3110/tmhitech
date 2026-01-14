@@ -141,7 +141,7 @@
 }
 .home-banner {
     position: relative;
-    background-image: url('/Content/images/banner-bg.jpg');
+    background-image: url('/Content/Images/banner-bg.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -223,3 +223,62 @@
     .slider-arrow.right {
         right: 20px;
     }
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+    z-index: 2;
+    box-sizing: border-box;
+}
+.overlay-left {
+    left: 0;
+}
+
+.overlay-right {
+    right: 0;
+}
+.equipment-section {
+    width: 100%;
+}
+.equipment-row {
+    display: flex;
+    width: 100%;
+}
+.equipment-item {
+    position: relative;
+    width: 50%;
+    height: 320px;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.bg1 {
+    background-image: url('/Content/Images/overlay/overlay1.jpg');
+}
+
+.bg2 {
+    background-image: url('/Content/Images/overlay/overlay2.jpg');
+}
+
+.bg3 {
+    background-image: url('/Content/Images/overlay/overlay3.jpg');
+}
+
+.bg4 {
+    background-image: url('/Content/Images/overlay/overlay4.jpg');
+}
+
+.bg5 {
+    background-image: url('/Content/Images/overlay/overlay5.jpg');
+}
+
+.bg6 {
+    background-image: url('/Content/Images/overlay/overlay6.jpg');
+}

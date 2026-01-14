@@ -184,6 +184,16 @@
     <Content Include="Content\Images\brands\neurowerk.PNG" />
     <Content Include="Content\Images\brands\olidef.PNG" />
     <Content Include="Content\Images\brands\weyer.PNG" />
+    <Content Include="Content\Images\news1.jpg" />
+    <Content Include="Content\Images\news2.jpg" />
+    <Content Include="Content\Images\news3.jpg" />
+    <Content Include="Content\Images\news4.jpg" />
+    <Content Include="Content\Images\overlay\overlay1.jpg" />
+    <Content Include="Content\Images\overlay\overlay2.jpg" />
+    <Content Include="Content\Images\overlay\overlay3.jpg" />
+    <Content Include="Content\Images\overlay\overlay4.jpg" />
+    <Content Include="Content\Images\overlay\overlay5.jpg" />
+    <Content Include="Content\Images\overlay\overlay6.jpg" />
     <Content Include="Content\Images\product-01.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
