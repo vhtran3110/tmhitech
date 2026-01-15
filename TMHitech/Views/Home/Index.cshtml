@@ -92,48 +92,25 @@
 </section>
 
 <section class="medical-knowledge">
-    <h2 class="section-title">KIẾN THỨC Y TẾ</h2>
+    <div class="container">
+        <h2 class="section-title">KIẾN THỨC Y TẾ</h2>
 
-    <div class="knowledge-grid">
+        <div class="knowledge-grid">
+            @foreach (var item in Model.LatestNews)
+            {
+                <div class="knowledge-item">
+                    <img src="@Url.Content("~/Content/Images/news/" + item.Image)" />
 
-        <div class="knowledge-item">
-            <img src="/Content/Images/news1.jpg" alt="">
-            <div class="content">
-                <h3>Khi bị nhồi máu cơ tim, bạn chỉ có 10 giây để tự cứu lấy mình</h3>
-                <p>
-                    Bạn cảm thấy trong ngực có một luồng đau nhói, hơn thế nữa nó bắt đầu lan đến cánh tay và cằm...
-                </p>
-            </div>
-        </div>
-
-        <div class="knowledge-item">
-            <img src="/Content/Images/news2.jpg" alt="">
-            <div class="content">
-                <h3>Khi bị nhồi máu cơ tim, bạn chỉ có 10 giây để tự cứu lấy mình</h3>
-                <p>
-                    Bạn cảm thấy trong ngực có một luồng đau nhói, hơn thế nữa nó bắt đầu lan đến cánh tay và cằm...
-                </p>
-            </div>
-        </div>
-
-        <div class="knowledge-item">
-            <img src="/Content/Images/news3.jpg" alt="">
-            <div class="content">
-                <h3>Khi bị nhồi máu cơ tim, bạn chỉ có 10 giây để tự cứu lấy mình</h3>
-                <p>
-                    Bạn cảm thấy trong ngực có một luồng đau nhói, hơn thế nữa nó bắt đầu lan đến cánh tay và cằm...
-                </p>
-            </div>
-        </div>
-
-        <div class="knowledge-item">
-            <img src="/Content/Images/news4.jpg" alt="">
-            <div class="content">
-                <h3>Khi bị nhồi máu cơ tim, bạn chỉ có 10 giây để tự cứu lấy mình</h3>
-                <p>
-                    Bạn cảm thấy trong ngực có một luồng đau nhói, hơn thế nữa nó bắt đầu lan đến cánh tay và cằm...
-                </p>
-            </div>
+                    <div class="content">
+                        <h3>@item.Title</h3>
+                        <p>
+                            @(item.Content != null && item.Content.Length > 120
+                                ? item.Content.Substring(0, 120) + "..."
+                                : item.Content)
+                        </p>
+                    </div>
+                </div>
+            }
         </div>
     </div>
 </section>

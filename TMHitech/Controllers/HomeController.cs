@@ -22,7 +22,11 @@ namespace TMHitech.MVC.Controllers
                     Manufacturer = "HEYER",
                     Country = "ĐỨC",
                     Image = "/Content/Images/product-01.jpg"
-                }
+                },
+                LatestNews = db.News
+            .OrderByDescending(x => x.CreatedDate)
+            .Take(4)
+            .ToList()
             };
             model.Manufacturers = db.Manufacturers.ToList();
             return View(model);

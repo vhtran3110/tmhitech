@@ -177,6 +177,10 @@
     <Content Include="Content\css\project.css" />
     <Content Include="Content\css\service.css" />
     <Content Include="Content\css\style.css" />
+    <Content Include="Content\Images\about\about1.jpg" />
+    <Content Include="Content\Images\about\about2.jpg" />
+    <Content Include="Content\Images\about\about3.jpg" />
+    <Content Include="Content\Images\about\banner-about.jpeg" />
     <Content Include="Content\Images\banner-bg.jpg" />
     <Content Include="Content\Images\brands\daray.PNG" />
     <Content Include="Content\Images\brands\heyer.PNG" />
@@ -184,10 +188,10 @@
     <Content Include="Content\Images\brands\neurowerk.PNG" />
     <Content Include="Content\Images\brands\olidef.PNG" />
     <Content Include="Content\Images\brands\weyer.PNG" />
-    <Content Include="Content\Images\news1.jpg" />
-    <Content Include="Content\Images\news2.jpg" />
-    <Content Include="Content\Images\news3.jpg" />
-    <Content Include="Content\Images\news4.jpg" />
+    <Content Include="Content\Images\news\news1.jpg" />
+    <Content Include="Content\Images\news\news2.jpg" />
+    <Content Include="Content\Images\news\news3.jpg" />
+    <Content Include="Content\Images\news\news4.jpg" />
     <Content Include="Content\Images\overlay\overlay1.jpg" />
     <Content Include="Content\Images\overlay\overlay2.jpg" />
     <Content Include="Content\Images\overlay\overlay3.jpg" />
@@ -252,6 +256,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Content\Images\project\" />
+    <Folder Include="Content\Images\service\" />
     <Folder Include="Views\News\" />
     <Folder Include="Views\Product\" />
   </ItemGroup>

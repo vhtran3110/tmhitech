@@ -7,7 +7,6 @@
     <a href="#">Trang chủ</a> › <span>Giới thiệu</span>
 </div>
 
-<head>
     <title>Giới Thiệu - TM Hi-Tech</title>
     <style>
         body {
@@ -15,29 +14,52 @@
         }
 
         .hero-section {
-            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://via.placeholder.com/1920x600?text=Background+Gioi+Thieu');
+            position: relative;
+            background-image: url('/Content/Images/about/banner-about.jpeg');
             background-size: cover;
-            background-position: center;
+            background-position: center right;
             background-repeat: no-repeat;
-            color: white;
-            padding: 100px 0;
-            text-align: center;
+            min-height: 420px;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            padding: 0 15px;
         }
 
-            .hero-section h2 {
-                font-size: 2rem;
-                margin-bottom: 20px;
+            .hero-section::before {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background: linear-gradient( to right, rgba(0, 80, 150, 0.75), rgba(0, 80, 150, 0.4), rgba(0, 80, 150, 0) );
+                z-index: 1;
             }
 
-        .breadcrumb {
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 600px;
+        }
+
+        .hero-section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .custom-breadcrumb {
             background: #f8f9fa;
             padding: 10px 0;
         }
 
-        .about-content img {
-            max-width: 100%;
-            height: auto;
-            margin: 15px 0;
+        .about-gallery {
+            margin-bottom: 30px;
+        }
+
+        .about-img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 6px;
+            display: block;
         }
 
         .sidebar-box {
@@ -72,6 +94,12 @@
                             color: #007bff;
                         }
 
+        .sidebar-news {
+            background: #fff;
+            padding: 15px;
+            border-left: 3px solid #0d6efd;
+        }
+
         .news-item {
             display: flex;
             margin-bottom: 20px;
@@ -103,19 +131,78 @@
             padding: 40px 0 20px;
             margin-top: 50px;
         }
+@@media (max-width: 991px) {
+    .hero-section {
+        min-height: 260px;
+        background-position: center;
+    }
+
+    .hero-content {
+        max-width: 100%;
+        padding: 20px;
+    }
+
+    .hero-section h2 {
+        font-size: 1.4rem;
+        line-height: 1.4;
+    }
+
+    .hero-section p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .about-gallery {
+        margin: 20px 0;
+    }
+
+    .about-gallery .col-md-4 {
+        margin-bottom: 15px;
+    }
+
+    .about-img {
+        height: 180px;
+    }
+
+    .col-lg-4 {
+        margin-top: 40px;
+    }
+
+    .sidebar-box {
+        padding: 15px;
+    }
+
+    h3 {
+        font-size: 1.3rem;
+    }
+
+    h5 {
+        font-size: 1.05rem;
+    }
+
+    p, li {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+}
     </style>
-</head>
-<body>
 
     <section class="hero-section">
         <div class="container">
-            <h2>Làm mọi thứ với một niềm đam mê, hoặc không là gì cả.</h2>
-            <p>Cuộc sống luôn đầy đầy những điều tốt đẹp, trong đó có cả bạn.</p>
-            <p>Gia đình, bạn bè và cộng đồng thường là nguồn động viên của mỗi người trong chúng ta.</p>
+            <div class="hero-content">
+                <h2>Làm mọi thứ với một niềm đam mê, hoặc không là gì cả.</h2>
+                <p>Cuộc sống luôn đong đầy những điều tốt đẹp, trong đó có cả bạn.</p>
+                <p>Gia đình, bạn bè và cộng đồng thường là nguồn động viên của mỗi người trong chúng ta.</p>
+            </div>
         </div>
     </section>
 
-    <nav aria-label="breadcrumb">
+    <nav class="custom-breadcrumb">
         <div class="container">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
@@ -138,10 +225,22 @@
 
                 <p><strong>Mục Tiêu Của TM Hitech:</strong> là trở thành một công ty kinh doanh thiết bị y tế tiêu biểu lớn mạnh và chuyên nghiệp tại Việt Nam. TM Hitech sẽ ngày càng phát triển vững chắc dựa trên nền tảng chất lượng sản phẩm và dịch vụ tốt nhất.</p>
 
-                <div class="row text-center my-4">
-                    <div class="col-md-4"><img src="https://via.placeholder.com/300x200?text=Hinh+1" alt="Giới thiệu 1" class="img-fluid rounded"></div>
-                    <div class="col-md-4"><img src="https://via.placeholder.com/300x200?text=Hinh+2" alt="Giới thiệu 2" class="img-fluid rounded"></div>
-                    <div class="col-md-4"><img src="https://via.placeholder.com/300x200?text=Hinh+3" alt="Giới thiệu 3" class="img-fluid rounded"></div>
+                <div class="row about-gallery">
+                    <div class="col-md-4">
+                        <img src="~/Content/Images/about/about1.jpg"
+                             alt="Giới thiệu 1"
+                             class="about-img">
+                    </div>
+                    <div class="col-md-4">
+                        <img src="~/Content/Images/about/about2.jpg"
+                             alt="Giới thiệu 2"
+                             class="about-img">
+                    </div>
+                    <div class="col-md-4">
+                        <img src="~/Content/Images/about/about3.jpg"
+                             alt="Giới thiệu 3"
+                             class="about-img">
+                    </div>
                 </div>
 
                 <h5 class="mt-5">Hoạt Động Của TMHitech:</h5>
@@ -192,31 +291,34 @@
                     </ul>
                 </div>
 
-                <div class="sidebar-box">
-                    <h5>TIN NỔI BẬT</h5>
-                    <div class="news-item">
-                        <img src="https://via.placeholder.com/60" alt="Tin 1">
-                        <div class="news-text">
-                            <a href="#">Khi bị nhồi máu cơ tim, bạn chỉ có 10 giây để cứu lấy chính mình</a>
-                            <small>23-02-2018</small>
-                        </div>
-                    </div>
-                    <div class="news-item">
-                        <img src="https://via.placeholder.com/60" alt="Tin 2">
-                        <div class="news-text">
-                            <a href="#">Khi bị nhồi máu cơ tim, bạn chỉ có 10 giây để cứu lấy chính mình</a>
-                            <small>23-02-2018</small>
-                        </div>
-                    </div>
-                    <div class="news-item">
-                        <img src="https://via.placeholder.com/60" alt="Tin 3">
-                        <div class="news-text">
-                            <a href="#">Khi bị nhồi máu cơ tim, bạn chỉ có 10 giây để cứu lấy chính mình</a>
-                            <small>23-02-2018</small>
+                <div class="container my-4">
+                        <div class="col-md-4">
+                            <div class="sidebar-news">
+                                <h4>TIN NỔI BẬT</h4>
+                                <div class="news-item">
+                                    <img src="~/Content/Images/news/news1.jpg" alt="Tin 1">
+                                    <div class="news-text">
+                                        <a href="#">Khi bị nhồi máu cơ tim, bạn chỉ có 10 giây để cứu lấy chính mình</a>
+                                        <small>23-02-2018</small>
+                                    </div>
+                                </div>
+                                <div class="news-item">
+                                    <img src="~/Content/Images/news/news2.jpg" alt="Tin 2">
+                                    <div class="news-text">
+                                        <a href="#">Khi bị nhồi máu cơ tim, bạn chỉ có 10 giây để cứu lấy chính mình</a>
+                                        <small>23-02-2018</small>
+                                    </div>
+                                </div>
+                                <div class="news-item">
+                                    <img src="~/Content/Images/news/news3.jpg" alt="Tin 3">
+                                    <div class="news-text">
+                                        <a href="#">Khi bị nhồi máu cơ tim, bạn chỉ có 10 giây để cứu lấy chính mình</a>
+                                        <small>23-02-2018</small>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>  
         </div>
-    </div>
-</body>

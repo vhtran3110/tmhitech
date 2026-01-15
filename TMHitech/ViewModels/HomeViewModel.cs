@@ -12,8 +12,8 @@ namespace TMHitech.MVC.ViewModels
         public List<Category> Categories { get; set; }
         = new List<Category>();
 
-        public List<News> News { get; set; }
-        = new List<News>();
+        public List<News> LatestNews { get; set; }
+       = new List<News>();
         public List<Manufacturer> Manufacturers { get; set; }
         = new List<Manufacturer>();
     }
