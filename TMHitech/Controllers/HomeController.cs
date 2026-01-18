@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using TMHitech.Models;
 using TMHitech.MVC.Data;
 using TMHitech.MVC.ViewModels;
 
@@ -34,15 +35,18 @@ namespace TMHitech.MVC.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            var model = new HomeViewModel();
 
-            return View();
+            model.LatestNews = db.News
+                .OrderByDescending(n => n.CreatedDate)
+                .Take(3)
+                .ToList();
+
+            return View(model);
         }
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
-
             return View();
         }
     }

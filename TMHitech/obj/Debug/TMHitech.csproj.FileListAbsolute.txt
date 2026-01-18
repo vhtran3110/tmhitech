@@ -81,3 +81,5 @@ C:\Users\Admin\Source\Repos\TMHitech\TMHitech\obj\Debug\TMHitech.csproj.CoreComp
 C:\Users\Admin\Source\Repos\TMHitech\TMHitech\obj\Debug\TMHitech.csproj.CopyComplete
 C:\Users\Admin\Source\Repos\TMHitech\TMHitech\obj\Debug\TMHitech.dll
 C:\Users\Admin\Source\Repos\TMHitech\TMHitech\obj\Debug\TMHitech.pdb
+C:\Users\Admin\Source\Repos\TMHitech\TMHitech\obj\Debug\TMHitech.Migrations.InitialCreate.resources
+C:\Users\Admin\Source\Repos\TMHitech\TMHitech\obj\Debug\TMHitech.csproj.GenerateResource.cache

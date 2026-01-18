@@ -1,17 +1,93 @@
-﻿@{
-    ViewBag.Title = "Contact";
-}
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
+﻿@model TMHitech.MVC.ViewModels.HomeViewModel
 
-<address>
-    One Microsoft Way<br />
-    Redmond, WA 98052-6399<br />
-    <abbr title="Phone">P:</abbr>
-    425.555.0100
-</address>
+<link href="~/Content/Site.css" rel="stylesheet" />
+<link href="~/Content/css/contact.css" rel="stylesheet" />
 
-<address>
-    <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
-    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-</address>
+<div class="breadcrumb">
+    <a href="#">Trang chủ</a> › <span>Liên hệ</span>
+</div>
+<title>Liên hệ - TM Hi-Tech</title>
+
+<section class="hero-section contact-hero">
+    <div class="container">
+        <div class="hero-content">
+            <h2>LIÊN HỆ</h2>
+        </div>
+    </div>
+</section>
+
+<div class="container text-center my-5">
+    <h4 class="text-primary font-weight-bold">
+        CÔNG TY CỔ PHẦN THIẾT BỊ CÔNG NGHỆ CAO TM.<br />
+        TM HI-TECH JSC.
+    </h4>
+</div>
+
+<div class="container mb-5">
+    <div class="row g-4">
+
+        <div class="col-md-4">
+            <div class="contact-box">
+                <iframe src="https://www.google.com/maps?q=781%20H%E1%BB%93ng%20H%C3%A0%2C%20H%C3%A0%20N%E1%BB%99i&output=embed"></iframe>
+                <h6>📍 Trụ sở:</h6>
+                <p>
+                    12B/2, 781 Hồng Hà, Hoàn Kiếm, Hà Nội<br />
+                    Tel: (04) 3 576 3436<br />
+                    Fax: (04) 3 576 5512
+                </p>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="contact-box">
+                <iframe src="https://www.google.com/maps?q=42%20Ph%C6%B0%C6%A1ng%20Mai%2C%20%C4%90%E1%BB%91ng%20%C4%90a&output=embed"></iframe>
+                <h6>📍 VPDD tại HN:</h6>
+                <p>
+                    42 Phương Mai, Đống Đa, Hà Nội<br />
+                    Tel: (04) 3 576 3636<br />
+                    Hotline: 098 836 6622
+                </p>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="contact-box">
+                <iframe src="https://www.google.com/maps?q=chung%20c%C6%B0%20B%C3%A0u%20C%C3%A1t%202%2C%20T%C3%A2n%20B%C3%ACnh&output=embed"></iframe>
+                <h6>📍 Chi nhánh HCM:</h6>
+                <p>
+                    Chung cư Bàu Cát 2, Tân Bình, TP.HCM<br />
+                    Tel: (08) 3860 3136<br />
+                    Hotline: 098 969 7177
+                </p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="container mb-5">
+    <div class="contact-form">
+        <h5 class="text-center mb-4">
+            Gửi thông tin liên hệ cho chúng tôi
+        </h5>
+
+        <form>
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <input class="form-control" placeholder="Họ tên *" />
+                    <input class="form-control mt-3" placeholder="Điện thoại *" />
+                    <input class="form-control mt-3" placeholder="Email *" />
+                    <input class="form-control mt-3" placeholder="Địa chỉ" />
+                </div>
+                <div class="col-md-6">
+                    <input class="form-control" placeholder="Tiêu đề" />
+                    <textarea class="form-control mt-3" rows="6" placeholder="Nội dung"></textarea>
+                </div>
+            </div>
+
+            <div class="text-end mt-4">
+                <button class="btn btn-secondary px-4">GỬI ĐI</button>
+            </div>
+        </form>
+    </div>
+</div>

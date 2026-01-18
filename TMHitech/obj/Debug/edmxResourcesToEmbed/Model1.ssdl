@@ -8,6 +8,14 @@
     <Property Name="Name" Type="nvarchar" MaxLength="200" />
     <Property Name="Image" Type="nvarchar" MaxLength="255" />
   </EntityType>
+  <EntityType Name="Manufacturers">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="100" />
+    <Property Name="Logo" Type="nvarchar" MaxLength="255" />
+  </EntityType>
   <EntityType Name="News">
     <Key>
       <PropertyRef Name="Id" />
@@ -31,6 +39,14 @@
     <Property Name="Model" Type="nvarchar" MaxLength="100" />
     <Property Name="Manufacturer" Type="nvarchar" MaxLength="255" />
   </EntityType>
+  <EntityType Name="Projects">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="300" />
+    <Property Name="Image" Type="nvarchar" MaxLength="255" />
+  </EntityType>
   <Association Name="FK__Products__Catego__398D8EEE">
     <End Role="Categories" Type="Self.Categories" Multiplicity="0..1" />
     <End Role="Products" Type="Self.Products" Multiplicity="*" />
@@ -45,8 +61,10 @@
   </Association>
   <EntityContainer Name="TMHitechDbModelStoreContainer">
     <EntitySet Name="Categories" EntityType="Self.Categories" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Manufacturers" EntityType="Self.Manufacturers" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="News" EntityType="Self.News" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Products" EntityType="Self.Products" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Projects" EntityType="Self.Projects" Schema="dbo" store:Type="Tables" />
     <AssociationSet Name="FK__Products__Catego__398D8EEE" Association="Self.FK__Products__Catego__398D8EEE">
       <End Role="Categories" EntitySet="Categories" />
       <End Role="Products" EntitySet="Products" />

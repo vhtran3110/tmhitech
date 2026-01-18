@@ -13,7 +13,7 @@
 <body class="project-page">
 
     <section class="banner">
-        <img src="Images/banner-du-an.jpg" alt="Dự án">
+        <img src="~/Content/Images/project/banner-project.jpeg" alt="Dự án">
     </section>
 
     <div class="project-wrapper">
@@ -21,7 +21,7 @@
             <h2 class="title">DỰ ÁN</h2>
 
             <div class="project-highlight">
-                <img src="Images/project-main.jpg" alt="">
+                <img src="~/Content/Images/project/project-main.jpg" alt="">
                 <div class="project-info">
                     <h3>Dự án cung cấp thiết bị cho bệnh viện Việt Đức</h3>
                     <p>
@@ -33,32 +33,47 @@
 
             <div class="project-grid">
                 <div class="project-item">
-                    <img src="Images/project1.jpg">
+                    <img src="~/Content/Images/project/project1.jpg">
                     <h4>Dự án cung cấp thiết bị cho bệnh viện Việt Đức</h4>
                 </div>
 
                 <div class="project-item">
-                    <img src="Images/project2.jpg">
+                    <img src="~/Content/Images/project/project2.jpg">
                     <h4>Dự án cung cấp thiết bị cho bệnh viện Việt Đức</h4>
                 </div>
 
                 <div class="project-item">
-                    <img src="Images/project3.jpg">
+                    <img src="~/Content/Images/project/project3.jpg">
                     <h4>Dự án cung cấp thiết bị cho bệnh viện Việt Đức</h4>
                 </div>
 
                 <div class="project-item">
-                    <img src="Images/project4.jpg">
+                    <img src="~/Content/Images/project/project4.jpg">
                     <h4>Dự án cung cấp thiết bị cho bệnh viện Việt Đức</h4>
                 </div>
 
                 <div class="project-item">
-                    <img src="Images/project5.jpg">
+                    <img src="~/Content/Images/project/project5.jpg">
                     <h4>Dự án cung cấp thiết bị cho bệnh viện Việt Đức</h4>
                 </div>
 
                 <div class="project-item">
-                    <img src="Images/project6.jpg">
+                    <img src="~/Content/Images/project/project6.jpg">
+                    <h4>Dự án cung cấp thiết bị cho bệnh viện Việt Đức</h4>
+                </div>
+
+                <div class="project-item">
+                    <img src="~/Content/Images/project/project7.jpg">
+                    <h4>Dự án cung cấp thiết bị cho bệnh viện Việt Đức</h4>
+                </div>
+
+                <div class="project-item">
+                    <img src="~/Content/Images/project/project8.jpg">
+                    <h4>Dự án cung cấp thiết bị cho bệnh viện Việt Đức</h4>
+                </div>
+
+                <div class="project-item">
+                    <img src="~/Content/Images/project/project9.jpg">
                     <h4>Dự án cung cấp thiết bị cho bệnh viện Việt Đức</h4>
                 </div>
             </div>
@@ -76,31 +91,30 @@
             <div class="box">
                 <h3>SẢN PHẨM NỔI BẬT</h3>
                 <ul class="list">
-                    <li><img src="images/sp1.jpg"> Chẩn đoán hình ảnh</li>
-                    <li><img src="images/sp2.jpg"> Thăm dò chức năng</li>
-                    <li><img src="images/sp3.jpg"> Cấp cứu hồi sức</li>
-                    <li><img src="images/sp4.jpg"> Thiết bị phòng mổ</li>
+                    <li><img src="~/Content/Images/overlay/overlay1.jpg"> Chẩn đoán hình ảnh</li>
+                    <li><img src="~/Content/Images/overlay/overlay2.jpg"> Thăm dò chức năng</li>
+                    <li><img src="~/Content/Images/overlay/overlay3.jpg"> Cấp cứu hồi sức</li>
+                    <li><img src="~/Content/Images/overlay/overlay4.jpg"> Thiết bị phòng mổ</li>
                 </ul>
             </div>
 
             <div class="box">
                 <h3>TIN NỔI BẬT</h3>
-                <ul class="news">
-                    <li>
-                        <img src="images/news1.jpg">
-                        <div>
-                            <p>Khi bị nhồi máu cơ tim, bạn chỉ có 10 giây để cứu lấy chính mình</p>
-                            <span>23-02-2018</span>
-                        </div>
-                    </li>
-                    <li>
-                        <img src="images/news2.jpg">
-                        <div>
-                            <p>Khi bị nhồi máu cơ tim, bạn chỉ có 10 giây để cứu lấy chính mình</p>
-                            <span>23-02-2018</span>
-                        </div>
-                    </li>
-                </ul>
+                @foreach (var item in Model.LatestNews)
+            {
+                <div class="knowledge-item">
+                    <img src="@Url.Content("~/Content/Images/news/" + item.Image)" />
+
+                    <div class="content">
+                        <h3>@item.Title</h3>
+                        <p>
+                            @(item.Content != null && item.Content.Length > 120
+                                ? item.Content.Substring(0, 120) + "..."
+                                : item.Content)
+                        </p>
+                    </div>
+                </div>
+            }
             </div>
         </aside>
     </div>

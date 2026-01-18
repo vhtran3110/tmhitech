@@ -134,8 +134,8 @@
                     @Html.ActionLink("TUYỂN DỤNG", "Index", "Recruit")
                 </li>
 
-                <li class="@(controller == "Contact" ? "active" : "")">
-                    @Html.ActionLink("LIÊN HỆ", "Index", "Contact")
+                <li class="@(controller == "Home" && action == "Contact" ? "active" : "")">
+                    @Html.ActionLink("LIÊN HỆ", "Contact", "Home")
                 </li>
             </ul>
 
@@ -184,7 +184,7 @@
 
                 <div class="footer-col facebook">
                     <h4>FACEBOOK</h4>
-                    <img src="/Content/images/facebook-box.png" alt="Facebook">
+                    <img src="~/Content/Images/banner-fb.jpeg" alt="Facebook">
                 </div>
 
             </div>

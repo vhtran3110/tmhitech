@@ -3,14 +3,24 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using TMHitech.MVC.Data;
+using TMHitech.MVC.ViewModels;
 
 namespace TMHitech.Controllers
 {
     public class ProjectController : Controller
     {
+        AppDbContext db = new AppDbContext();
         public ActionResult Index()
         {
-            return View();
+            var model = new HomeViewModel();
+
+            model.LatestNews = db.News
+                .OrderByDescending(n => n.CreatedDate)
+                .Take(3)
+                .ToList();
+
+            return View(model);
         }
     }
 }
