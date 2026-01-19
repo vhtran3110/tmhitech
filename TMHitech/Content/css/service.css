@@ -1,4 +1,32 @@
-﻿.container {
+﻿.service-hero {
+    position: relative;
+    background-image: url('/Content/Images/service/banner-service.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 360px;
+    display: flex;
+    align-items: center;
+}
+
+    .service-hero .hero-overlay {
+        position: absolute;
+        inset: 0;
+        background: rgba(0,0,0,0.35);
+    }
+
+    .service-hero .hero-content {
+        position: relative;
+        z-index: 2;
+        padding-left: 80px;
+    }
+
+    .service-hero h2 {
+        color: #fff;
+        font-size: 42px;
+        font-weight: bold;
+    }
+.container {
     width: 1200px;
     margin: auto;
 }

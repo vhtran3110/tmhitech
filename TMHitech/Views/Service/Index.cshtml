@@ -1,15 +1,23 @@
 ﻿@model TMHitech.MVC.ViewModels.HomeViewModel
 
 <link href="~/Content/Site.css" rel="stylesheet" />
-<link href="~/Content/css/service.css"   rel="stylesheet" />
+<link href="~/Content/css/service.css" rel="stylesheet" />
 
 <div class="breadcrumb">
     <a href="#">Trang chủ</a> › <span>Dịch vụ</span>
 </div>
 
+<head>
+    <title>Dịch vụ - TM Hitech</title>
+</head>
+<section class="service-hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+    </div>
+</section>
+<h2>DỊCH VỤ</h2>
 <div class="container service-page">
     <div class="service-content">
-        <h2 class="title">DỊCH VỤ</h2>
 
         <p>
             Với đội ngũ chuyên gia có kinh nghiệm hơn 10 năm tham gia các dự án
@@ -27,7 +35,7 @@
             hỗ trợ khách hàng thiết kế tổng thể dự án.
         </p>
 
-        <img src="images/service-thumb.jpg" alt="Dịch vụ TM Hitech" class="service-img">
+        <img src="~/Content/Images/service/service1.jpg" alt="Dịch vụ TM Hitech" class="service-img">
 
         <h3>Dịch vụ trong bảo hành</h3>
         <p>
@@ -57,19 +65,19 @@
 
             <ul class="product-list">
                 <li>
-                    <img src="images/sp1.jpg">
-                    <a href="#">Chuẩn đoán hình ảnh</a>
+                    <img src="~/Content/Images/overlay/overlay1.jpg">
+                    <a href="#">Chẩn đoán hình ảnh</a>
                 </li>
                 <li>
-                    <img src="images/sp2.jpg">
+                    <img src="~/Content/Images/overlay/overlay2.jpg">
                     <a href="#">Thăm dò chức năng</a>
                 </li>
                 <li>
-                    <img src="images/sp3.jpg">
+                    <img src="~/Content/Images/overlay/overlay3.jpg">
                     <a href="#">Cấp cứu hồi sức tích cực</a>
                 </li>
                 <li>
-                    <img src="images/sp4.jpg">
+                    <img src="~/Content/Images/overlay/overlay4.jpg">
                     <a href="#">Thiết bị phòng mổ</a>
                 </li>
             </ul>
@@ -77,23 +85,27 @@
 
         <div class="box">
             <h4 class="box-title">TIN NỔI BẬT</h4>
+            @if (Model.LatestNews != null && Model.LatestNews.Any())
+            {
+                foreach (var item in Model.LatestNews)
+                {
+<div class="knowledge-item">
+    <img src="@Url.Content("~/Content/Images/news/" + item.Image)"
+         alt="@item.Title" />
 
-            <ul class="news-list">
-                <li>
-                    <img src="images/news1.jpg">
-                    <div>
-                        <a href="#">Khi bị nhồi máu cơ tim, bạn chỉ có 10 giây để cứu lấy chính mình</a>
-                        <span>23-02-2018</span>
-                    </div>
-                </li>
-                <li>
-                    <img src="images/news2.jpg">
-                    <div>
-                        <a href="#">Dấu hiệu cảnh báo sớm…</a>
-                        <span>23-02-2018</span>
-                    </div>
-                </li>
-            </ul>
+    <div class="content">
+        <h3>@item.Title</h3>
+        <p>
+            @(item.Content != null && item.Content.Length > 120
+                                ? item.Content.Substring(0, 120) + "..."
+                                : item.Content)
+        </p>
+    </div>
+</div> }
+            }
+            else
+            {
+<p>Chưa có tin tức.</p>            }
         </div>
     </aside>
 </div>

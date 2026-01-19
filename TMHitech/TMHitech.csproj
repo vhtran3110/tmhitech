@@ -194,6 +194,8 @@
     <Content Include="Content\Images\project\project7.jpg" />
     <Content Include="Content\Images\project\project8.jpg" />
     <Content Include="Content\Images\project\project9.jpg" />
+    <Content Include="Content\Images\service\banner-service.jpeg" />
+    <Content Include="Content\Images\service\service1.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -234,7 +236,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Content\Images\service\" />
     <Folder Include="Views\News\" />
     <Folder Include="Views\Product\" />
   </ItemGroup>
